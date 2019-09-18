@@ -1,0 +1,11 @@
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\bin\Debug\netcoreapp2.0\netcoresimple.deps.json
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\bin\Debug\netcoreapp2.0\netcoresimple.runtimeconfig.json
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\bin\Debug\netcoreapp2.0\netcoresimple.runtimeconfig.dev.json
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\bin\Debug\netcoreapp2.0\netcoresimple.dll
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\bin\Debug\netcoreapp2.0\netcoresimple.pdb
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\obj\Debug\netcoreapp2.0\netcoresimple.csprojResolveAssemblyReference.cache
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\obj\Debug\netcoreapp2.0\netcoresimple.csproj.CoreCompileInputs.cache
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\obj\Debug\netcoreapp2.0\netcoresimple.AssemblyInfoInputs.cache
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\obj\Debug\netcoreapp2.0\netcoresimple.AssemblyInfo.cs
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\obj\Debug\netcoreapp2.0\netcoresimple.dll
+C:\Proyectos\mvclite\netcoresimple\netcoresimple\obj\Debug\netcoreapp2.0\netcoresimple.pdb

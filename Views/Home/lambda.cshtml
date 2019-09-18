@@ -1,0 +1,80 @@
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Card Slots</title>
+        <link href="cardslots.css" rel="stylesheet" type="text/css">
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.92.0.min.js"></script>
+        <script type="text/javascript">
+            // Configure AWS SDK for JavaScript & set region and credentials
+            // Initialize the Amazon Cognito credentials provider
+           AWS.config.update({region: 'eu-central-1'});
+           AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'eu-central-1:44b1d1dd-5352-4e53-96f8-3fb0728f1905'});
+
+           // Prepare to call Lambda function
+           var lambda = new AWS.Lambda({region: 'eu-central-1', apiVersion: '2015-03-31'});
+           
+
+            function callLambda() {
+                // Call the Lambda function
+                document.getElementById('MSG').innerHTML="";
+                $('#results-container').addClass('hidden');
+                var parameters = {
+                      FunctionName : 'test',
+                      InvocationType : 'RequestResponse',
+                      LogType : 'None',
+                      Payload: '{ "answer": "'+ document.getElementById('answer').value +'" }'
+                   };
+
+                    lambda.invoke(parameters, function(err, data) {
+                    if (err) {
+                        prompt(err);
+                    } else {
+                        results = JSON.parse(data.Payload);
+                        document.getElementById('MSG').innerHTML = results.MSG;
+
+                        $('#results-container').removeClass('hidden');
+                    }
+                });
+            };
+
+
+        </script>
+
+      </head>
+      <body>
+        <div style="">
+            <h2> Lambda Application - Demo </h2>
+            <h2> Who is the most handsome man in CORE ? </h2>
+            <hr>
+            <p> Please select your answer </p>
+            <div class="row">
+                <div class="col-sm-12 center">
+                    <div class="form-group col-sm-3" style="">
+                        <select class="form-control" id="answer">
+                            <option value="">Please select...</option>
+                            <option value="Luis">Luis</option>
+                            <option value="Pedro">Pedro</option>
+                            <option value="Juan">Juan</option>
+                            <option value="Daniel">Daniel</option>
+                            <option value="Jose">Jose</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 center">
+                    <div class="form-group col-sm-3 center" style="text-align: center">
+                        <button id="btn" class="btn btn-info" onclick="callLambda()"> Get Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-container" class="hidden">
+            <label><span style="color: green" id="MSG"></span></label>
+            <br>
+        </div>
+      </body>
+    </html>
