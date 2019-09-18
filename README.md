@@ -1,1 +1,1 @@
-# demoDotNetCore
+# demoDotNetCore v1.0
